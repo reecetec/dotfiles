@@ -67,3 +67,8 @@ keymap("n", "<leader>dd", vim.diagnostic.open_float, opts)
 keymap("n", "]d", vim.diagnostic.goto_next, opts)
 -- Go to previous diagnostic
 keymap("n", "[d", vim.diagnostic.goto_prev, opts)
+
+
+-- toggleterm
+keymap("n", "<C-t>", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" })
+keymap("t", "<C-t>", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" })
