@@ -27,73 +27,66 @@ config.keys = {
 -- Set Ctrl+B as the leader 
 config.leader = { key = 'b', mods = 'CTRL', timeout_milliseconds = 1000 }
 
-
--- Nord Color Scheme
 config.colors = {
-  -- The default text color
-  foreground = '#D8DEE9',
-  -- The default background color
-  background = '#2E3440',
-
-  -- Overrides the cell background color when the current cell is occupied by the cursor
-  cursor_bg = '#D8DEE9',
-  cursor_fg = '#2E3440',
-  cursor_border = '#D8DEE9',
-
-  -- the foreground color of selected text
-  selection_fg = '#2E3440',
-  -- the background color of selected text
-  selection_bg = '#D8DEE9',
-
-  -- The color of the scrollbar "thumb"; the portion that represents the current viewport
-  scrollbar_thumb = '#434C5E',
-
-  -- The color of the split lines between panes
-  split = '#434C5E',
-
+  foreground = '#1d1d1f',
+  background = '#f5f5f7',
+  
+  -- Cursor colors
+  cursor_bg = '#007aff',
+  cursor_fg = '#ffffff',
+  cursor_border = '#007aff',
+  
+  -- Selection colors
+  selection_fg = '#1d1d1f',
+  selection_bg = '#d1d1d6',
+  
+  -- Scrollbar and splits
+  scrollbar_thumb = '#d2d2d7',
+  split = '#d2d2d7',
+  
   ansi = {
-    '#3B4252', -- black
-    '#BF616A', -- red
-    '#A3BE8C', -- green
-    '#EBCB8B', -- yellow
-    '#81A1C1', -- blue
-    '#B48EAD', -- magenta
-    '#88C0D0', -- cyan
-    '#E5E9F0', -- white
+    '#1d1d1f', -- black
+    '#ff3b30', -- red
+    '#30d158', -- green
+    '#ff9500', -- yellow
+    '#007aff', -- blue
+    '#af52de', -- magenta
+    '#5ac8fa', -- cyan
+    '#f2f2f7', -- white
   },
   brights = {
-    '#4C566A', -- bright black
-    '#BF616A', -- bright red
-    '#A3BE8C', -- bright green
-    '#EBCB8B', -- bright yellow
-    '#81A1C1', -- bright blue
-    '#B48EAD', -- bright magenta
-    '#8FBCBB', -- bright cyan
-    '#ECEFF4', -- bright white
+    '#6e6e73', -- bright black
+    '#ff453a', -- bright red
+    '#32d74b', -- bright green
+    '#ffb340', -- bright yellow
+    '#0a84ff', -- bright blue
+    '#bf5af2', -- bright magenta
+    '#64d2ff', -- bright cyan
+    '#ffffff', -- bright white
   },
-
+  
   -- Tab bar colors
   tab_bar = {
-    background = '#2E3440',
+    background = '#ffffff',
     active_tab = {
-      bg_color = '#81A1C1',
-      fg_color = '#2E3440',
+      bg_color = '#007aff',
+      fg_color = '#ffffff',
     },
     inactive_tab = {
-      bg_color = '#4C566A',
-      fg_color = '#D8DEE9',
+      bg_color = '#f2f2f7',
+      fg_color = '#6e6e73',
     },
     inactive_tab_hover = {
-      bg_color = '#5E81AC',
-      fg_color = '#D8DEE9',
+      bg_color = '#e5e5ea',
+      fg_color = '#1d1d1f',
     },
     new_tab = {
-      bg_color = '#434C5E',
-      fg_color = '#D8DEE9',
+      bg_color = '#f2f2f7',
+      fg_color = '#6e6e73',
     },
     new_tab_hover = {
-      bg_color = '#5E81AC',
-      fg_color = '#D8DEE9',
+      bg_color = '#e5e5ea',
+      fg_color = '#1d1d1f',
     },
   },
 }
@@ -102,24 +95,25 @@ config.colors = {
 config.font = wezterm.font('JetBrains Mono', { weight = 'Medium' })
 config.font_size = 11.0
 
--- Window appearance
-config.window_background_opacity = 0.95
+-- Window appearance with transparency
+config.window_background_opacity = 0.75
+config.text_background_opacity = 0.9
+-- config.macos_window_background_blur = 20
 config.window_decorations = "RESIZE"
 config.window_padding = {
-  left = 8,
-  right = 8,
-  top = 8,
-  bottom = 8,
+  left = 3,
+  right = 3,
+  top = 3,
+  bottom = 3,
 }
 
 -- Tab bar
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 config.hide_tab_bar_if_only_one_tab = false
-config.tab_max_width = 32
+config.tab_max_width = 64
 
 -- Scrollback
 config.scrollback_lines = 10000
 
 return config
-
